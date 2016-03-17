@@ -3,7 +3,7 @@ var base = require('./base');
 
 var prod = {
     name: 'book-inventory-suowik-test',
-    collaborators: ['pkiwols@gmail.com', 'marcin.juszkiewicz@schibsted.pl']
+    collaborators: ['pkiwols@gmail.com']
 };
 
 var config = _({}, base.config, prod);
