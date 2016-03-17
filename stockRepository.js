@@ -1,9 +1,9 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://localhost:27017/books';
+var url = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/books';
 var collectionPromise = MongoClient
     .connect(url)
     .then(function (db) {
-        return db.collection('books');
+        return db.collection('books-suowik');
     });
 
 var findAll = function () {
