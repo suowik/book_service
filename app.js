@@ -16,5 +16,6 @@ module.exports = function (stockRepository) {
     app.use(middleware.clientError);
     app.use(middleware.serverError);
 
+
     return app;
 };
