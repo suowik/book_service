@@ -19,7 +19,7 @@ var base = {
         'http-end-to-end-continue': {enabled: false}
     },
     formation: [{process: 'web', quantity: 1, size: 'Free'}],
-    log_drains: []
+    log_drains: ['syslog://data.logentries.com:13636']
 };
 
 module.exports = {config: base, configurator: configurator};
