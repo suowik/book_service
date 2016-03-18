@@ -12,7 +12,15 @@ module.exports = function (stockRepository) {
                 .findByIsbn(req.params.isbn)
                 .then(function (result) {
                     if (result !== null) {
-                        res.json({count: result});
+                        res.format({
+                            html: function () {
+                                res.send('<div class="copiesLeft">' + result + '</div>');
+                            },
+
+                            json: function () {
+                                res.send({count: result});
+                            }
+                        });
                     } else {
                         next();
                     }
