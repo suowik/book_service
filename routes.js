@@ -14,7 +14,7 @@ module.exports = function (stockRepository) {
                     if (result !== null) {
                         res.format({
                             html: function () {
-                                res.send('<div class="copiesLeft">' + result + '</div>');
+                                res.send('<div class="copiesLeft">' + result + ' books left </div>');
                             },
 
                             json: function () {
